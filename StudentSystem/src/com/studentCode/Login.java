@@ -33,6 +33,7 @@ public class Login {
     // login登录方法
     public static void login(ArrayList<User> list) {
 
+
     }
 
     // Register注册方法
@@ -147,17 +148,19 @@ public class Login {
     public static boolean checkPersonID(String personId) {
         // 1.如果输入的身份证号长度不够18直接返回false
         if (personId.length() != 18) {
+            System.out.println("号码不够18位");
             return false;
         }
         // 2.如果是以0开头，直接返回false
         if (personId.startsWith("0")) {
+            System.out.println("身份证不能以0开始");
             return false;
         }
         // 3.前17位必须都是数字
         for (int i = 0; i < personId.length() - 1; i++) {
             char c = personId.charAt(i);
             if (!(c >= '0' && c <= 9)) {
-                return false;
+                return true;
             }
         }
         // 4.最后一位可以是数字，也可以是大写X或小写x
