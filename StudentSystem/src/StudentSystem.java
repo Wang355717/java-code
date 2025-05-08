@@ -7,7 +7,7 @@ import java.util.Scanner;
  * {@code @Description:} com.studentCode
  */
 public class StudentSystem {
-    public static void main(String[] args) {
+    public static void startStudentSystem() {
         // 定义一个集合用于存储学生信息
         ArrayList<Student> list = new ArrayList<>();
         loop:
